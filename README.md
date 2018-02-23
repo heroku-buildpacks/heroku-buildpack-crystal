@@ -1,10 +1,11 @@
 # Crystal Heroku Buildpack
+*Note: This fork adds a link flag to a `libc` folder on your project root in order to collect static c libs*
 
 You can create an app in Heroku with Crystal's buildpack by running the
 following command:
 
 ```bash
-$ heroku create myapp --buildpack https://github.com/crystal-lang/heroku-buildpack-crystal.git
+$ heroku create myapp --buildpack https://github.com/xosmond/heroku-buildpack-crystal.git
 ```
 
 The default behaviour is to use the [latest crystal release](https://github.com/crystal-lang/crystal/releases/latest).
