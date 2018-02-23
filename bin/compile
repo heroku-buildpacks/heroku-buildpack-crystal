@@ -79,3 +79,9 @@ else
     crystal build src/${shard_name}.cr --release $NO_DEBUG_IF_AVAILABLE --link-flags -L$BUILD_DIR/libc -o app
   finished
 fi
+
+if [ -f sam.cr ]; then
+  start "Compiling sam.cr"
+    crystal build sam.cr --release $NO_DEBUG_IF_AVAILABLE --link-flags -L$BUILD_DIR/libc
+  finished
+fi
