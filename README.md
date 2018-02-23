@@ -1,5 +1,5 @@
 # Crystal Heroku Buildpack
-*Note: This fork adds a link flag to a `libc` folder on your project root in order to collect static c libs*
+*Note: This fork also compiles sam.cr*
 
 You can create an app in Heroku with Crystal's buildpack by running the
 following command:

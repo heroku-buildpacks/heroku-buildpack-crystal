@@ -71,17 +71,17 @@ NO_DEBUG_IF_AVAILABLE=`crystal build --help | grep -q -- --no-debug && echo -n -
 
 if [ -f app.cr ]; then
   start "Compiling app.cr (using old behaviour, app.cr exists - ignoring shard.yml)"
-    crystal build app.cr --release $NO_DEBUG_IF_AVAILABLE --link-flags -L$BUILD_DIR/libc
+    crystal build app.cr --release $NO_DEBUG_IF_AVAILABLE
   finished
 else
   eval $(parse_yaml shard.yml "shard_")
   start "Compiling src/${shard_name}.cr (auto-detected from shard.yml)"
-    crystal build src/${shard_name}.cr --release $NO_DEBUG_IF_AVAILABLE --link-flags -L$BUILD_DIR/libc -o app
+    crystal build src/${shard_name}.cr --release $NO_DEBUG_IF_AVAILABLE -o app
   finished
 fi
 
 if [ -f sam.cr ]; then
   start "Compiling sam.cr"
-    crystal build sam.cr --release $NO_DEBUG_IF_AVAILABLE --link-flags -L$BUILD_DIR/libc
+    crystal build sam.cr --release $NO_DEBUG_IF_AVAILABLE
   finished
 fi
