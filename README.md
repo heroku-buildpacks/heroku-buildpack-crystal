@@ -1,7 +1,6 @@
 # Crystal Heroku Buildpack
-*Note: This fork also compiles sam.cr*
 
-You can create an app in Heroku with Crystal's buildpack by running the
+You can create a worker in Heroku with Crystal's buildpack by running the
 following command:
 
 ```bash
